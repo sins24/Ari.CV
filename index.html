@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - I Made Ari Prawira</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            900: '#4c1d95',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-effect {
+            box-shadow: 0 0 35px -5px rgba(139, 92, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Floating Navbar -->
+    <header class="fixed top-4 left-0 right-0 z-50 px-4">
+        <div class="max-w-5xl mx-auto bg-slate-900/80 backdrop-blur-lg border border-slate-800/80 rounded-2xl shadow-xl px-4 sm:px-6 py-3 transition-all duration-300">
+            <div class="flex justify-between items-center">
+                <!-- Logo / Name -->
+                <a href="#home" class="text-lg font-bold bg-gradient-to-r from-brand-400 to-indigo-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
+                    Ari Prawira
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#tentang" class="text-slate-300 hover:text-brand-400 transition-colors py-1">Tentang</a>
+                    <a href="#pendidikan" class="text-slate-300 hover:text-brand-400 transition-colors py-1">Pendidikan</a>
+                    <a href="#keahlian" class="text-slate-300 hover:text-brand-400 transition-colors py-1">Keahlian & Hobi</a>
+                    <a href="#kontak" class="text-slate-300 hover:text-brand-400 transition-colors py-1">Kontak</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Buka Menu Navigation" class="md:hidden text-slate-300 focus:outline-none p-1.5 rounded-lg hover:bg-slate-800">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pt-3 mt-3 border-t border-slate-800 space-y-2 text-sm">
+                <a href="#tentang" class="block py-2 text-slate-300 hover:text-brand-400 px-3 rounded-lg hover:bg-slate-800/50 transition-colors">Tentang Saya</a>
+                <a href="#pendidikan" class="block py-2 text-slate-300 hover:text-brand-400 px-3 rounded-lg hover:bg-slate-800/50 transition-colors">Pendidikan</a>
+                <a href="#keahlian" class="block py-2 text-slate-300 hover:text-brand-400 px-3 rounded-lg hover:bg-slate-800/50 transition-colors">Keahlian & Hobi</a>
+                <a href="#kontak" class="block py-2 text-slate-300 hover:text-brand-400 px-3 rounded-lg hover:bg-slate-800/50 transition-colors">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Profile Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-14">
+                
+                <!-- Hero Text -->
+                <div class="flex-1 text-center md:text-left order-2 md:order-1 space-y-5">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-sparkles text-xs"></i> Curriculum Vitae
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        I Made <br class="hidden sm:inline" />
+                        <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+                            Ari Prawira
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+                        Individu yang komunikatif dan berorientasi pada hasil. Berpengalaman dalam pengelolaan hubungan klien serta memiliki passion besar di bidang seni kuliner dan strategi e-sports.
+                    </p>
+
+                    <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="#kontak" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm rounded-xl shadow-lg shadow-brand-600/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-xs"></i> Hubungi Saya
+                        </a>
+                        <a href="#tentang" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 font-medium text-sm rounded-xl transition-all">
+                            Lihat Profil
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Photo -->
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative group">
+                        <!-- Border Glow Ring -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-indigo-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-80 transition duration-500"></div>
+                        
+                        <!-- Photo Container with updated photo -->
+                        <div class="relative w-56 h-72 sm:w-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-slate-700/80 bg-slate-900 shadow-2xl">
+                            <img 
+                                src="Ari.jpeg" 
+                                alt="Foto Profil I Made Ari Prawira" 
+                                class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x500/1e1b4b/ffffff?text=I+Made+Ari+Prawira';"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 mb-20">
+
+        <!-- Section: Tentang Saya -->
+        <section id="tentang" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                    <i class="fa-solid fa-user text-sm"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Tentang Saya</h2>
+            </div>
+
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 sm:p-8 backdrop-blur-sm relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2 space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
+                        <p>
+                            Saya adalah pribadi berdedikasi yang senantiasa fokus pada kepuasan pelanggan dan efisiensi kerja. Berbekal kemampuan komunikasi yang adaptif, saya terbiasa membangun serta menjaga hubungan profesional yang harmonis dengan klien.
+                        </p>
+                        <p>
+                            Di luar aktivitas profesional, saya sangat menyukai bidang kuliner dan memasak yang melatih kerapian, konsistensi, serta kreativitas saya. Di waktu luang, saya aktif melatih fokus dan kerja sama tim melalui game kompetitif Mobile Legends.
+                        </p>
+                    </div>
+
+                    <!-- Quick Info Badges -->
+                    <div class="bg-slate-950/80 p-5 rounded-xl border border-slate-800/80 space-y-3">
+                        <div class="flex items-center space-x-3 text-slate-300 text-xs sm:text-sm">
+                            <i class="fa-solid fa-signature text-brand-400 w-4"></i>
+                            <span>I Made Ari Prawira</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-300 text-xs sm:text-sm">
+                            <i class="fa-solid fa-envelope text-brand-400 w-4"></i>
+                            <span class="truncate">madearinamaku@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3 text-slate-300 text-xs sm:text-sm">
+                            <i class="fa-solid fa-location-dot text-brand-400 w-4"></i>
+                            <span>Bali, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Pendidikan -->
+        <section id="pendidikan" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                    <i class="fa-solid fa-graduation-cap text-sm"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Riwayat Pendidikan</h2>
+            </div>
+
+            <div class="relative border-l-2 border-slate-800 ml-4 sm:ml-6 space-y-8">
+                
+                <!-- SMA -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="bg-slate-900/60 p-5 sm:p-6 rounded-xl border border-slate-800/80 hover:border-brand-500/40 transition-colors">
+                        <span class="inline-block px-2.5 py-0.5 bg-brand-500/10 text-brand-400 text-xs font-semibold rounded mb-2 border border-brand-500/20">
+                            Sekolah Menengah Atas
+                        </span>
+                        <h3 class="text-lg font-bold text-white">SMA Negeri 1 Dawan</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-1">Menyelesaikan pendidikan tingkat atas dengan fokus akademik dan keaktifan kegiatan sekolah.</p>
+                    </div>
+                </div>
+
+                <!-- SMP -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-indigo-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="bg-slate-900/60 p-5 sm:p-6 rounded-xl border border-slate-800/80 hover:border-indigo-500/40 transition-colors">
+                        <span class="inline-block px-2.5 py-0.5 bg-slate-800 text-slate-300 text-xs font-semibold rounded mb-2">
+                            Sekolah Menengah Pertama
+                        </span>
+                        <h3 class="text-lg font-bold text-white">SMP Negeri 2 Dawan</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-1">Pendidikan menengah pertama dengan pengalaman belajar berorganisasi dan bersosialisasi.</p>
+                    </div>
+                </div>
+
+                <!-- SD -->
+                <div class="relative pl-6 sm:pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-purple-500 group-hover:scale-125 transition-transform"></div>
+                    <div class="bg-slate-900/60 p-5 sm:p-6 rounded-xl border border-slate-800/80 hover:border-purple-500/40 transition-colors">
+                        <span class="inline-block px-2.5 py-0.5 bg-slate-800 text-slate-300 text-xs font-semibold rounded mb-2">
+                            Sekolah Dasar
+                        </span>
+                        <h3 class="text-lg font-bold text-white">SD Negeri 1 Semarapura Tengah</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-1">Pendidikan dasar dalam membentuk karakter, kedisiplinan, serta fondasi belajar.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Keahlian & Hobi -->
+        <section id="keahlian" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                    <i class="fa-solid fa-briefcase text-sm"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Keahlian & Hobi</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Keahlian Card -->
+                <div class="bg-slate-900/60 p-6 sm:p-8 rounded-2xl border border-slate-800/80 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2.5 bg-brand-500/10 text-brand-400 rounded-xl border border-brand-500/20">
+                            <i class="fa-solid fa-headset text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Keahlian Profesional</h3>
+                    </div>
+
+                    <div class="space-y-5">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="font-medium text-slate-200 flex items-center gap-2">
+                                    <i class="fa-solid fa-handshake text-brand-400"></i> Menghendel Klien
+                                </span>
+                                <span class="text-xs text-brand-400 font-semibold bg-brand-500/10 px-2 py-0.5 rounded border border-brand-500/20">Tinggi</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-brand-500 to-indigo-500 h-2 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="font-medium text-slate-200 flex items-center gap-2">
+                                    <i class="fa-solid fa-utensils text-brand-400"></i> Memasak
+                                </span>
+                                <span class="text-xs text-brand-400 font-semibold bg-brand-500/10 px-2 py-0.5 rounded border border-brand-500/20">Mahir</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-brand-500 to-purple-500 h-2 rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobi Card -->
+                <div class="bg-slate-900/60 p-6 sm:p-8 rounded-2xl border border-slate-800/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="p-2.5 bg-indigo-500/10 text-indigo-400 rounded-xl border border-indigo-500/20">
+                                <i class="fa-solid fa-gamepad text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Hobi & Minat</h3>
+                        </div>
+
+                        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-800/80 space-y-2">
+                            <div class="flex items-center gap-2 text-indigo-400 font-medium">
+                                <i class="fa-solid fa-mobile-screen text-sm"></i>
+                                <span>Bermain Mobile Legends</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                                Melatih pemikiran strategis, pengambilan keputusan cepat, serta koordinasi tim dan fleksibilitas peran.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-800/60 text-xs text-slate-500 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check text-brand-400"></i>
+                        <span>Kombinasi komunikasi, kuliner & e-sports</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Kontak -->
+        <section id="kontak" class="scroll-mt-28">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                    <i class="fa-solid fa-paper-plane text-sm"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">Kontak Saya</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Information Card -->
+                <div class="bg-gradient-to-br from-brand-900/80 via-slate-900 to-indigo-950 rounded-2xl p-6 sm:p-8 border border-brand-500/30 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-white">Mari Terhubung</h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            Punya pertanyaan atau tertarik bekerjasama? Silakan kirimkan pesan Anda melalui formulir di samping.
+                        </p>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                                <div class="w-9 h-9 rounded-lg bg-slate-800/80 flex items-center justify-center text-brand-400 border border-slate-700/50">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="truncate">
+                                    <p class="text-[10px] text-slate-400 uppercase tracking-wider">Email</p>
+                                    <a href="mailto:madearinamaku@gmail.com" class="hover:underline font-medium">madearinamaku@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
+                                <div class="w-9 h-9 rounded-lg bg-slate-800/80 flex items-center justify-center text-brand-400 border border-slate-700/50">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] text-slate-400 uppercase tracking-wider">Lokasi</p>
+                                    <p class="font-medium">Klungkung, Bali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-[11px] text-slate-500 pt-4 border-t border-slate-800">
+                        &copy; <span id="year"></span> I Made Ari Prawira.
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-2 bg-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-800/80">
+                    
+                    <!-- Alert Message -->
+                    <div id="contact-alert" class="hidden mb-6 p-4 rounded-xl text-xs sm:text-sm border"></div>
+
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-slate-300 mb-2">Nama Lengkap</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    required 
+                                    placeholder="Nama Anda"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder:text-slate-600"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-xs font-medium text-slate-300 mb-2">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    required 
+                                    placeholder="nama@email.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder:text-slate-600"
+                                >
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-medium text-slate-300 mb-2">Pesan</label>
+                            <textarea 
+                                id="message" 
+                                rows="4" 
+                                required 
+                                placeholder="Tuliskan pesan atau pertanyaan Anda..."
+                                class="w-full px-4 py-3 rounded-xl bg-slate-950/80 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder:text-slate-600 resize-none"
+                            ></textarea>
+                        </div>
+
+                        <button 
+                            type="submit" 
+                            id="submit-btn"
+                            class="w-full sm:w-auto px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm rounded-xl shadow-lg shadow-brand-600/30 transition-all flex items-center justify-center gap-2"
+                        >
+                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                            <span>Kirim Pesan</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-6 text-center text-xs text-slate-600">
+        <p>Curriculum Vitae &bull; I Made Ari Prawira</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set dynamic copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on menu link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Contact Form Handling
+        const contactForm = document.getElementById('contact-form');
+        const alertBox = document.getElementById('contact-alert');
+        const submitBtn = document.getElementById('submit-btn');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if(!name || !email || !message) {
+                showAlert('Mohon lengkapi semua kolom formulir!', 'error');
+                return;
+            }
+
+            // Simulate loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70');
+            submitBtn.querySelector('span').textContent = 'Mengirim...';
+
+            setTimeout(() => {
+                showAlert(`Terima kasih <strong>${name}</strong>, pesan Anda berhasil terkirim!`, 'success');
+                contactForm.reset();
+                
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70');
+                submitBtn.querySelector('span').textContent = 'Kirim Pesan';
+            }, 800);
+        });
+
+        function showAlert(msg, type) {
+            alertBox.classList.remove('hidden', 'bg-emerald-950/80', 'text-emerald-300', 'border-emerald-800', 'bg-rose-950/80', 'text-rose-300', 'border-rose-800');
+            
+            if (type === 'success') {
+                alertBox.classList.add('bg-emerald-950/80', 'text-emerald-300', 'border-emerald-800');
+            } else {
+                alertBox.classList.add('bg-rose-950/80', 'text-rose-300', 'border-rose-800');
+            }
+
+            alertBox.innerHTML = msg;
+        }
+    </script>
+</body>
+</html>
